@@ -10,7 +10,8 @@ window.getInviewPercent = function() {
         var boundingRect = target.getBoundingClientRect();
         var { x, y, width, height } = boundingRect;
 
-        var currentWidth = x < 0 ? width + x : width + (width - x);
+        var currentWidth = x < 0 ? width + x : width;
+        // var currentWidth = x < 0 ? width + x : width + (width - x);
 
         var currentHeight = y < 0 ? height + y : height + (height - y);
 
@@ -32,13 +33,17 @@ window.getInviewPercent = function() {
 }
 
 
-window.log = function() {
-    var targetDivs = Array.from(document.getElementsByTagName('div'));
-    var targetDiv = targetDivs.filter((div) => div.innerText === 'Moat Ad')[0];
-    var target = targetDiv.parentNode;
-
-    var boundingRect = target.getBoundingClientRect();
-    var { x, y, width, height } = boundingRect;
-
-    console.log(height, width, x, y);
-}
+// window.log = function() {
+//
+//     setInterval(() => {
+//         var targetDivs = Array.from(document.getElementsByTagName('div'));
+//         var targetDiv = targetDivs.filter((div) => div.innerText === 'Moat Ad')[0];
+//         var target = targetDiv.parentNode;
+//
+//         var boundingRect = target.getBoundingClientRect();
+//         var { x, y, top, bottom, left, right, height, width } = boundingRect;
+//         console.log(top, bottom, height);
+//
+//     }, 2000);
+//
+// };

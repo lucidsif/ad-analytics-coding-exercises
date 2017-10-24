@@ -1,8 +1,10 @@
-window.getInviewPercent = function() {
+window.getInviewTime = function() {
+    var time = 0;
+    var answerSpan = document.getElementById('answer');
+    answerSpan.innerText = time;
     setInterval(() => {
 
-        var target = document.querySelector('#sidebar img').parentNode;
-
+        var target = document.querySelector('#sidebar img');
         var boundingRect = target.getBoundingClientRect();
         var { x, y, width, height } = boundingRect;
 
@@ -21,8 +23,18 @@ window.getInviewPercent = function() {
         } else if (percent > 100) {
             percent = 100;
         }
-        var answerSpan = document.getElementById('answer');
-        answerSpan.innerText = percent;
-    }, 2000)
+
+        if (percent >= 50) {
+            time += 100;
+        }
+
+    }, 100);
+
+
+    setInterval(() => {
+        answerSpan.innerText = time;
+    }, 500);
+
+
 
 };
