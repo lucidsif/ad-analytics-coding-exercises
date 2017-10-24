@@ -24,4 +24,4 @@ window.getInviewPercent = function() {
 
     }, 2000)
 
-}
+};
