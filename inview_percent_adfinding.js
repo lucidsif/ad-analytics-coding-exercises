@@ -1,9 +1,16 @@
+// find moat add and apply the inview_percent function
+
 window.getInviewPercent = function() {
     setInterval(() => {
 
-        var target = document.querySelector('#sidebar img');
+        var targetDivs = Array.from(document.getElementsByTagName('div'));
+        var targetDiv = targetDivs.filter((div) => div.innerText === 'Moat Ad')[0];
+        var target = targetDiv.parentNode;
+
         var boundingRect = target.getBoundingClientRect();
         var { x, y, width, height } = boundingRect;
+
+        console.log(height, width, x, y);
 
         var currentWidth = x < 0 ? width + x : width + (width - x);
 
