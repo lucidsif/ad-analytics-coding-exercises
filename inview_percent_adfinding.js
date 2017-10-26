@@ -1,47 +1,35 @@
-// find moat add and apply the inview_percent function
-
 window.getInviewPercent = function() {
-    setInterval(() => {
 
-        let targetDivs = Array.from(document.getElementsByTagName('div'));
-        let targetDiv = targetDivs.filter((div) => div.innerText === 'Moat Ad')[0];
-        let target = targetDiv.parentNode;
+    let targetDivs = Array.from(document.getElementsByTagName('div'));
+    let targetDiv = targetDivs.filter((div) => div.innerText === 'Moat Ad')[0];
+    let target = targetDiv.parentNode;
 
-        let boundingRect = target.getBoundingClientRect();
-        let { x, y, width, height } = boundingRect;
+    // Get the node's bounding client rect and extract the needed properties
+    let boundingRect = target.getBoundingClientRect();
+    let { x, y, width, height } = boundingRect;
 
-        let currentWidth = x < 0 ? width + x : width;
-        let currentHeight = y < 0 ? height + y : window.innerHeight - y;
+    // If x/left coordinate is less than 0, add to the width of the target
+    // Otherwise, return the width of the target
+    let currentWidth = x < 0 ? width + x : width;
 
-        let totalArea = width * height;
-        let currentArea = currentWidth * currentHeight
-        let percent =  (currentArea / totalArea) * 100;
+    // If y/top coordinate is less than 0, add to the height of the target
+    // Otherwise, subtract the coordinate from the viewport's height.
+    let currentHeight = y < 0 ? height + y : window.innerHeight - y;
 
-        if (percent < 0) {
-            percent = 0;
-        } else if (percent > 100) {
-            percent = 100;
-        }
+    // If currentHeight is negative, it is not in the viewport.
+    // Else, if calculated currentheight is greater than target height, set to its height
+    if (currentHeight < 0) {
+        currentHeight = 0;
+    } else if (currentHeight > height) {
+        currentHeight = height;
+    }
 
-        let answerSpan = document.getElementById('answer');
-        answerSpan.innerText = percent;
+    // Calculate the total area of the target
+    let totalArea = width * height;
+    // Calculate the visible area of the target
+    let currentArea = currentWidth * currentHeight;
+    // Calculate the percentage of the visible area
+    let percent =  (currentArea / totalArea) * 100;
 
-    }, 2000)
-
-}
-
-
-// window.log = function() {
-//
-//     setInterval(() => {
-//         let targetDivs = Array.from(document.getElementsByTagName('div'));
-//         let targetDiv = targetDivs.filter((div) => div.innerText === 'Moat Ad')[0];
-//         let target = targetDiv.parentNode;
-//
-//         let boundingRect = target.getBoundingClientRect();
-//         let { x, y, top, bottom, left, right, height, width } = boundingRect;
-//         console.log(top, bottom, height);
-//
-//     }, 2000);
-//
-// };
+    return percent;
+};
