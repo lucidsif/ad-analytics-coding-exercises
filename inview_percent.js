@@ -1,20 +1,19 @@
 window.getInviewPercent = function() {
     setInterval(() => {
 
-        var target = document.querySelector('#sidebar img').parentNode;
+        var target = document.querySelector('#sidebar img');
 
         var boundingRect = target.getBoundingClientRect();
         var { x, y, width, height } = boundingRect;
 
         var currentWidth = x < 0 ? width + x : width;
-        // var currentWidth = x < 0 ? width + x : width + (width - x);
 
-        var currentHeight = y < 0 ? height + y : height + (height - y);
+        var currentHeight = y < 0 ? height + y : window.innerHeight - y;
 
         var totalArea = width * height;
-        var currentArea = currentWidth * currentHeight
+        var currentArea = currentWidth * currentHeight;
 
-
+        console.log(y, window.innerHeight, height);
         var percent =  (currentArea / totalArea) * 100;
         if (percent < 0) {
             percent = 0;

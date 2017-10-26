@@ -36,5 +36,4 @@ window.getInviewTime = function() {
     }, 500);
 
 
-
 };
