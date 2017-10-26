@@ -1,23 +1,21 @@
 window.getInviewTime = function() {
-    var time = 0;
-    var answerSpan = document.getElementById('answer');
+    let time = 0;
+    let answerSpan = document.getElementById('answer');
     answerSpan.innerText = time;
+
     setInterval(() => {
 
-        var target = document.querySelector('#sidebar img');
-        var boundingRect = target.getBoundingClientRect();
-        var { x, y, width, height } = boundingRect;
+        let target = document.querySelector('#sidebar img');
+        let boundingRect = target.getBoundingClientRect();
+        let { x, y, width, height } = boundingRect;
 
-        var currentWidth = x < 0 ? width + x : width;
-        // var currentWidth = x < 0 ? width + x : width + (width - x);
+        let currentWidth = x < 0 ? width + x : width;
+        let currentHeight = y < 0 ? height + y : window.innerHeight - y;
 
-        var currentHeight = y < 0 ? height + y : height + (height - y);
+        let totalArea = width * height;
+        let currentArea = currentWidth * currentHeight;
+        let percent =  (currentArea / totalArea) * 100;
 
-        var totalArea = width * height;
-        var currentArea = currentWidth * currentHeight
-
-
-        var percent =  (currentArea / totalArea) * 100;
         if (percent < 0) {
             percent = 0;
         } else if (percent > 100) {

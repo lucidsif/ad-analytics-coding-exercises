@@ -3,29 +3,27 @@
 window.getInviewPercent = function() {
     setInterval(() => {
 
-        var targetDivs = Array.from(document.getElementsByTagName('div'));
-        var targetDiv = targetDivs.filter((div) => div.innerText === 'Moat Ad')[0];
-        var target = targetDiv.parentNode;
+        let targetDivs = Array.from(document.getElementsByTagName('div'));
+        let targetDiv = targetDivs.filter((div) => div.innerText === 'Moat Ad')[0];
+        let target = targetDiv.parentNode;
 
-        var boundingRect = target.getBoundingClientRect();
-        var { x, y, width, height } = boundingRect;
+        let boundingRect = target.getBoundingClientRect();
+        let { x, y, width, height } = boundingRect;
 
-        var currentWidth = x < 0 ? width + x : width;
-        // var currentWidth = x < 0 ? width + x : width + (width - x);
+        let currentWidth = x < 0 ? width + x : width;
+        let currentHeight = y < 0 ? height + y : window.innerHeight - y;
 
-        var currentHeight = y < 0 ? height + y : height + (height - y);
+        let totalArea = width * height;
+        let currentArea = currentWidth * currentHeight
+        let percent =  (currentArea / totalArea) * 100;
 
-        var totalArea = width * height;
-        var currentArea = currentWidth * currentHeight
-
-
-        var percent =  (currentArea / totalArea) * 100;
         if (percent < 0) {
             percent = 0;
         } else if (percent > 100) {
             percent = 100;
         }
-        var answerSpan = document.getElementById('answer');
+
+        let answerSpan = document.getElementById('answer');
         answerSpan.innerText = percent;
 
     }, 2000)
@@ -36,12 +34,12 @@ window.getInviewPercent = function() {
 // window.log = function() {
 //
 //     setInterval(() => {
-//         var targetDivs = Array.from(document.getElementsByTagName('div'));
-//         var targetDiv = targetDivs.filter((div) => div.innerText === 'Moat Ad')[0];
-//         var target = targetDiv.parentNode;
+//         let targetDivs = Array.from(document.getElementsByTagName('div'));
+//         let targetDiv = targetDivs.filter((div) => div.innerText === 'Moat Ad')[0];
+//         let target = targetDiv.parentNode;
 //
-//         var boundingRect = target.getBoundingClientRect();
-//         var { x, y, top, bottom, left, right, height, width } = boundingRect;
+//         let boundingRect = target.getBoundingClientRect();
+//         let { x, y, top, bottom, left, right, height, width } = boundingRect;
 //         console.log(top, bottom, height);
 //
 //     }, 2000);
