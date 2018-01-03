@@ -5,7 +5,7 @@
 	<title>Ad Finding Within Iframe</title>
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
-<link rel="stylesheet" href="http://127.0.0.1:8080/app.css">
+<link rel="stylesheet" href="/app.css">
 
 <script>
     var answerFn = 'getInviewPercent';
@@ -30,7 +30,7 @@
                     ads[i].appendChild(label);
 
                     var scriptTag = document.createElement('script');
-                    scriptSrc = 'http://127.0.0.1:8080/adfinding_within_iframe/adfinding_within_iframe.js';
+                    scriptSrc = '/adfinding_within_iframe/adfinding_within_iframe.js';
                     scriptTag.src = scriptSrc;
                     ads[i].appendChild(scriptTag);
 
@@ -55,7 +55,7 @@
     });
 
 </script>
-<script src="http://127.0.0.1:8080/app.js"></script>
+<script src="/app.js"></script>
 <body>
 
 <div id="instructions-container">

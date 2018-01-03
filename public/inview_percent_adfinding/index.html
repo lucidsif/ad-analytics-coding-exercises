@@ -4,7 +4,7 @@
 <head>
     <title>Ad Finding</title>
 </head>
-<link rel="stylesheet" href="http://127.0.0.1:8080/app.css">
+<link rel="stylesheet" href="/app.css">
 <script>
     var answerFn = 'getInviewPercent';
 
@@ -26,7 +26,7 @@
                 ads[i].appendChild(label);
 
                 var scriptTag = document.createElement('script');
-                scriptSrc = 'http://127.0.0.1:8080/inview_percent_adfinding/inview_percent_adfinding.js';
+                scriptSrc = '/inview_percent_adfinding/inview_percent_adfinding.js';
                 scriptTag.src = scriptSrc;
                 ads[i].appendChild(scriptTag);
             } else {
@@ -38,7 +38,7 @@
     });
 
 </script>
-<script src="http://127.0.0.1:8080/app.js"></script>
+<script src="/app.js"></script>
 <body>
 
 <div id="instructions-container">
