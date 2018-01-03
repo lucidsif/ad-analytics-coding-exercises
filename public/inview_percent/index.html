@@ -1,0 +1,112 @@
+
+<!doctype html>
+<html>
+<head>
+	<title>In-View Percent</title>
+</head>
+<link rel="stylesheet" href="http://127.0.0.1:8080/app.css">
+<script>
+    var answerFn = 'getInviewPercent';
+</script>
+<script src="http://127.0.0.1:8080/app.js"></script>
+<body>
+
+<div id="instructions-container">
+	<div id="instructions">
+		<div>
+			<u>Instructions: &nbsp;In-View Percent</u>
+		</div>
+		<div>
+			<ul>
+				<li>Name your file <code>inview_percent.js</code></li>
+				<li>Create a function on the <code>window</code> object called <code>getInviewPercent()</code></li>
+				<li>It should return the percent of the ad that is viewable (visible within the browser viewport)</li>
+				<li><strong>HINT:</strong> Use <a target="_blank" style="color:#ADD8E6;" href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect">this JS function</a> to get the ad's coordinates!</li>
+				<ul>
+		</div>
+	</div>
+
+	<div id="answer-container">
+		<div>
+			This will automatically update with the result of your function
+		</div>
+		In-View Percent: <span id="answer"></span> %
+	</div>
+</div>
+
+<div id="sidebar" style="margin-top:1000px;">
+	<div>
+		<div>
+			<img src="http://via.placeholder.com/300x250?text=Ad">
+		</div>
+		<script src="http://127.0.0.1:8080/inview_percent/inview_percent.js"></script>
+	</div>
+</div>
+
+<div id="content">
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean semper metus mauris, id congue mi aliquam nec. Donec nec eros at lorem volutpat consectetur. Vestibulum eget consequat nisi. Vestibulum a mauris suscipit, sollicitudin nibh eget, vestibulum velit. Morbi placerat est a commodo feugiat. Pellentesque ac aliquam sem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris in nibh bibendum, venenatis libero in, posuere ligula. Mauris in efficitur lectus, ut iaculis orci. Curabitur odio odio, imperdiet non porttitor vel, commodo ut orci. Fusce vehicula tortor mi. Phasellus a nunc lorem. Etiam vel tortor eros. Vivamus hendrerit nunc mi, non sagittis magna sollicitudin eu. Integer commodo auctor elit. Nunc interdum nulla vel arcu commodo tempor.</p>
+
+	<p>In ex nisi, blandit id lorem et, condimentum pulvinar ante. Morbi mollis velit et diam eleifend mollis. Vestibulum sodales tellus sit amet metus gravida, venenatis feugiat lacus vulputate. Duis ac diam aliquam, vehicula neque et, ornare tellus. Donec ultrices ac orci id tempor. Maecenas id consectetur purus. Quisque tincidunt facilisis dui eget eleifend. Vestibulum eu ligula congue, luctus ipsum a, sodales massa. Curabitur vel neque ac nibh laoreet lacinia. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vitae mi diam. Integer ullamcorper commodo augue, aliquam aliquet massa congue eget.</p>
+
+	<p>Quisque tincidunt a quam eu tincidunt. Proin pellentesque dictum dolor non dapibus. Vestibulum dictum neque eget mollis congue. Aenean porta ipsum id mattis posuere. Aenean volutpat nunc et porttitor sollicitudin. Mauris at laoreet felis. Fusce pharetra massa nisl, vel volutpat tortor finibus ac.</p>
+
+	<p>In gravida a mauris quis dictum. Nulla bibendum ligula eget nisi eleifend tincidunt. Vivamus eros sapien, venenatis ut metus at, fermentum commodo ipsum. In venenatis et odio at imperdiet. Phasellus volutpat dignissim magna, a facilisis ligula. Nullam lobortis porttitor odio, in condimentum ante aliquam ut. Etiam laoreet bibendum tristique. Sed ac mauris hendrerit, elementum libero cursus, fringilla elit. Etiam consectetur elementum eros, ac interdum ante molestie et.</p>
+
+	<p>
+		Vestibulum aliquam imperdiet tellus. Aenean nec risus tincidunt, dictum risus ac, dignissim nibh. Nullam eget iaculis urna, ut tincidunt elit. Maecenas odio erat, venenatis at ante nec, luctus sagittis nisi. Pellentesque et est venenatis, tincidunt mauris mollis, iaculis enim. Praesent id volutpat augue. Morbi scelerisque tempus auctor. Praesent non egestas magna. Curabitur nec erat at velit hendrerit sagittis. Fusce iaculis sagittis nunc, et semper augue consectetur at. Etiam vitae arcu sit amet dui lacinia condimentum.</p>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean semper metus mauris, id congue mi aliquam nec. Donec nec eros at lorem volutpat consectetur. Vestibulum eget consequat nisi. Vestibulum a mauris suscipit, sollicitudin nibh eget, vestibulum velit. Morbi placerat est a commodo feugiat. Pellentesque ac aliquam sem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris in nibh bibendum, venenatis libero in, posuere ligula. Mauris in efficitur lectus, ut iaculis orci. Curabitur odio odio, imperdiet non porttitor vel, commodo ut orci. Fusce vehicula tortor mi. Phasellus a nunc lorem. Etiam vel tortor eros. Vivamus hendrerit nunc mi, non sagittis magna sollicitudin eu. Integer commodo auctor elit. Nunc interdum nulla vel arcu commodo tempor.</p>
+
+	<p>
+		In ex nisi, blandit id lorem et, condimentum pulvinar ante. Morbi mollis velit et diam eleifend mollis. Vestibulum sodales tellus sit amet metus gravida, venenatis feugiat lacus vulputate. Duis ac diam aliquam, vehicula neque et, ornare tellus. Donec ultrices ac orci id tempor. Maecenas id consectetur purus. Quisque tincidunt facilisis dui eget eleifend. Vestibulum eu ligula congue, luctus ipsum a, sodales massa. Curabitur vel neque ac nibh laoreet lacinia. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vitae mi diam. Integer ullamcorper commodo augue, aliquam aliquet massa congue eget.</p>
+
+	<p>Quisque tincidunt a quam eu tincidunt. Proin pellentesque dictum dolor non dapibus. Vestibulum dictum neque eget mollis congue. Aenean porta ipsum id mattis posuere. Aenean volutpat nunc et porttitor sollicitudin. Mauris at laoreet felis. Fusce pharetra massa nisl, vel volutpat tortor finibus ac.</p>
+
+	<p>In gravida a mauris quis dictum. Nulla bibendum ligula eget nisi eleifend tincidunt. Vivamus eros sapien, venenatis ut metus at, fermentum commodo ipsum. In venenatis et odio at imperdiet. Phasellus volutpat dignissim magna, a facilisis ligula. Nullam lobortis porttitor odio, in condimentum ante aliquam ut. Etiam laoreet bibendum tristique. Sed ac mauris hendrerit, elementum libero cursus, fringilla elit. Etiam consectetur elementum eros, ac interdum ante molestie et.</p>
+
+	<p>
+		Vestibulum aliquam imperdiet tellus. Aenean nec risus tincidunt, dictum risus ac, dignissim nibh. Nullam eget iaculis urna, ut tincidunt elit. Maecenas odio erat, venenatis at ante nec, luctus sagittis nisi. Pellentesque et est venenatis, tincidunt mauris mollis, iaculis enim. Praesent id volutpat augue. Morbi scelerisque tempus auctor. Praesent non egestas magna. Curabitur nec erat at velit hendrerit sagittis. Fusce iaculis sagittis nunc, et semper augue consectetur at. Etiam vitae arcu sit amet dui lacinia condimentum.</p>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean semper metus mauris, id congue mi aliquam nec. Donec nec eros at lorem volutpat consectetur. Vestibulum eget consequat nisi. Vestibulum a mauris suscipit, sollicitudin nibh eget, vestibulum velit. Morbi placerat est a commodo feugiat. Pellentesque ac aliquam sem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris in nibh bibendum, venenatis libero in, posuere ligula. Mauris in efficitur lectus, ut iaculis orci. Curabitur odio odio, imperdiet non porttitor vel, commodo ut orci. Fusce vehicula tortor mi. Phasellus a nunc lorem. Etiam vel tortor eros. Vivamus hendrerit nunc mi, non sagittis magna sollicitudin eu. Integer commodo auctor elit. Nunc interdum nulla vel arcu commodo tempor.</p>
+
+	<p>In ex nisi, blandit id lorem et, condimentum pulvinar ante. Morbi mollis velit et diam eleifend mollis. Vestibulum sodales tellus sit amet metus gravida, venenatis feugiat lacus vulputate. Duis ac diam aliquam, vehicula neque et, ornare tellus. Donec ultrices ac orci id tempor. Maecenas id consectetur purus. Quisque tincidunt facilisis dui eget eleifend. Vestibulum eu ligula congue, luctus ipsum a, sodales massa. Curabitur vel neque ac nibh laoreet lacinia. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vitae mi diam. Integer ullamcorper commodo augue, aliquam aliquet massa congue eget.</p>
+
+	<p>Quisque tincidunt a quam eu tincidunt. Proin pellentesque dictum dolor non dapibus. Vestibulum dictum neque eget mollis congue. Aenean porta ipsum id mattis posuere. Aenean volutpat nunc et porttitor sollicitudin. Mauris at laoreet felis. Fusce pharetra massa nisl, vel volutpat tortor finibus ac.</p>
+
+	<p>In gravida a mauris quis dictum. Nulla bibendum ligula eget nisi eleifend tincidunt. Vivamus eros sapien, venenatis ut metus at, fermentum commodo ipsum. In venenatis et odio at imperdiet. Phasellus volutpat dignissim magna, a facilisis ligula. Nullam lobortis porttitor odio, in condimentum ante aliquam ut. Etiam laoreet bibendum tristique. Sed ac mauris hendrerit, elementum libero cursus, fringilla elit. Etiam consectetur elementum eros, ac interdum ante molestie et.</p>
+
+	<p>Vestibulum aliquam imperdiet tellus. Aenean nec risus tincidunt, dictum risus ac, dignissim nibh. Nullam eget iaculis urna, ut tincidunt elit. Maecenas odio erat, venenatis at ante nec, luctus sagittis nisi. Pellentesque et est venenatis, tincidunt mauris mollis, iaculis enim. Praesent id volutpat augue. Morbi scelerisque tempus auctor. Praesent non egestas magna. Curabitur nec erat at velit hendrerit sagittis. Fusce iaculis sagittis nunc, et semper augue consectetur at. Etiam vitae arcu sit amet dui lacinia condimentum.</p>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean semper metus mauris, id congue mi aliquam nec. Donec nec eros at lorem volutpat consectetur. Vestibulum eget consequat nisi. Vestibulum a mauris suscipit, sollicitudin nibh eget, vestibulum velit. Morbi placerat est a commodo feugiat. Pellentesque ac aliquam sem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris in nibh bibendum, venenatis libero in, posuere ligula. Mauris in efficitur lectus, ut iaculis orci. Curabitur odio odio, imperdiet non porttitor vel, commodo ut orci. Fusce vehicula tortor mi. Phasellus a nunc lorem. Etiam vel tortor eros. Vivamus hendrerit nunc mi, non sagittis magna sollicitudin eu. Integer commodo auctor elit. Nunc interdum nulla vel arcu commodo tempor.</p>
+
+	<p>In ex nisi, blandit id lorem et, condimentum pulvinar ante. Morbi mollis velit et diam eleifend mollis. Vestibulum sodales tellus sit amet metus gravida, venenatis feugiat lacus vulputate. Duis ac diam aliquam, vehicula neque et, ornare tellus. Donec ultrices ac orci id tempor. Maecenas id consectetur purus. Quisque tincidunt facilisis dui eget eleifend. Vestibulum eu ligula congue, luctus ipsum a, sodales massa. Curabitur vel neque ac nibh laoreet lacinia. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vitae mi diam. Integer ullamcorper commodo augue, aliquam aliquet massa congue eget.</p>
+
+	<p>Quisque tincidunt a quam eu tincidunt. Proin pellentesque dictum dolor non dapibus. Vestibulum dictum neque eget mollis congue. Aenean porta ipsum id mattis posuere. Aenean volutpat nunc et porttitor sollicitudin. Mauris at laoreet felis. Fusce pharetra massa nisl, vel volutpat tortor finibus ac.</p>
+
+	<p>In gravida a mauris quis dictum. Nulla bibendum ligula eget nisi eleifend tincidunt. Vivamus eros sapien, venenatis ut metus at, fermentum commodo ipsum. In venenatis et odio at imperdiet. Phasellus volutpat dignissim magna, a facilisis ligula. Nullam lobortis porttitor odio, in condimentum ante aliquam ut. Etiam laoreet bibendum tristique. Sed ac mauris hendrerit, elementum libero cursus, fringilla elit. Etiam consectetur elementum eros, ac interdum ante molestie et.</p>
+
+	<p>Vestibulum aliquam imperdiet tellus. Aenean nec risus tincidunt, dictum risus ac, dignissim nibh. Nullam eget iaculis urna, ut tincidunt elit. Maecenas odio erat, venenatis at ante nec, luctus sagittis nisi. Pellentesque et est venenatis, tincidunt mauris mollis, iaculis enim. Praesent id volutpat augue. Morbi scelerisque tempus auctor. Praesent non egestas magna. Curabitur nec erat at velit hendrerit sagittis. Fusce iaculis sagittis nunc, et semper augue consectetur at. Etiam vitae arcu sit amet dui lacinia condimentum.</p>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean semper metus mauris, id congue mi aliquam nec. Donec nec eros at lorem volutpat consectetur. Vestibulum eget consequat nisi. Vestibulum a mauris suscipit, sollicitudin nibh eget, vestibulum velit. Morbi placerat est a commodo feugiat. Pellentesque ac aliquam sem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris in nibh bibendum, venenatis libero in, posuere ligula. Mauris in efficitur lectus, ut iaculis orci. Curabitur odio odio, imperdiet non porttitor vel, commodo ut orci. Fusce vehicula tortor mi. Phasellus a nunc lorem. Etiam vel tortor eros. Vivamus hendrerit nunc mi, non sagittis magna sollicitudin eu. Integer commodo auctor elit. Nunc interdum nulla vel arcu commodo tempor.</p>
+
+	<p>In ex nisi, blandit id lorem et, condimentum pulvinar ante. Morbi mollis velit et diam eleifend mollis. Vestibulum sodales tellus sit amet metus gravida, venenatis feugiat lacus vulputate. Duis ac diam aliquam, vehicula neque et, ornare tellus. Donec ultrices ac orci id tempor. Maecenas id consectetur purus. Quisque tincidunt facilisis dui eget eleifend. Vestibulum eu ligula congue, luctus ipsum a, sodales massa. Curabitur vel neque ac nibh laoreet lacinia. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vitae mi diam. Integer ullamcorper commodo augue, aliquam aliquet massa congue eget.</p>
+
+	<p>Quisque tincidunt a quam eu tincidunt. Proin pellentesque dictum dolor non dapibus. Vestibulum dictum neque eget mollis congue. Aenean porta ipsum id mattis posuere. Aenean volutpat nunc et porttitor sollicitudin. Mauris at laoreet felis. Fusce pharetra massa nisl, vel volutpat tortor finibus ac.</p>
+
+	<p>In gravida a mauris quis dictum. Nulla bibendum ligula eget nisi eleifend tincidunt. Vivamus eros sapien, venenatis ut metus at, fermentum commodo ipsum. In venenatis et odio at imperdiet. Phasellus volutpat dignissim magna, a facilisis ligula. Nullam lobortis porttitor odio, in condimentum ante aliquam ut. Etiam laoreet bibendum tristique. Sed ac mauris hendrerit, elementum libero cursus, fringilla elit. Etiam consectetur elementum eros, ac interdum ante molestie et.</p>
+
+	<p>Vestibulum aliquam imperdiet tellus. Aenean nec risus tincidunt, dictum risus ac, dignissim nibh. Nullam eget iaculis urna, ut tincidunt elit. Maecenas odio erat, venenatis at ante nec, luctus sagittis nisi. Pellentesque et est venenatis, tincidunt mauris mollis, iaculis enim. Praesent id volutpat augue. Morbi scelerisque tempus auctor. Praesent non egestas magna. Curabitur nec erat at velit hendrerit sagittis. Fusce iaculis sagittis nunc, et semper augue consectetur at. Etiam vitae arcu sit amet dui lacinia condimentum.</p>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean semper metus mauris, id congue mi aliquam nec. Donec nec eros at lorem volutpat consectetur. Vestibulum eget consequat nisi. Vestibulum a mauris suscipit, sollicitudin nibh eget, vestibulum velit. Morbi placerat est a commodo feugiat. Pellentesque ac aliquam sem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris in nibh bibendum, venenatis libero in, posuere ligula. Mauris in efficitur lectus, ut iaculis orci. Curabitur odio odio, imperdiet non porttitor vel, commodo ut orci. Fusce vehicula tortor mi. Phasellus a nunc lorem. Etiam vel tortor eros. Vivamus hendrerit nunc mi, non sagittis magna sollicitudin eu. Integer commodo auctor elit. Nunc interdum nulla vel arcu commodo tempor.</p>
+
+	<p>In ex nisi, blandit id lorem et, condimentum pulvinar ante. Morbi mollis velit et diam eleifend mollis. Vestibulum sodales tellus sit amet metus gravida, venenatis feugiat lacus vulputate. Duis ac diam aliquam, vehicula neque et, ornare tellus. Donec ultrices ac orci id tempor. Maecenas id consectetur purus. Quisque tincidunt facilisis dui eget eleifend. Vestibulum eu ligula congue, luctus ipsum a, sodales massa. Curabitur vel neque ac nibh laoreet lacinia. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vitae mi diam. Integer ullamcorper commodo augue, aliquam aliquet massa congue eget.</p>
+
+	<p>Quisque tincidunt a quam eu tincidunt. Proin pellentesque dictum dolor non dapibus. Vestibulum dictum neque eget mollis congue. Aenean porta ipsum id mattis posuere. Aenean volutpat nunc et porttitor sollicitudin. Mauris at laoreet felis. Fusce pharetra massa nisl, vel volutpat tortor finibus ac.</p>
+
+	<p>In gravida a mauris quis dictum. Nulla bibendum ligula eget nisi eleifend tincidunt. Vivamus eros sapien, venenatis ut metus at, fermentum commodo ipsum. In venenatis et odio at imperdiet. Phasellus volutpat dignissim magna, a facilisis ligula. Nullam lobortis porttitor odio, in condimentum ante aliquam ut. Etiam laoreet bibendum tristique. Sed ac mauris hendrerit, elementum libero cursus, fringilla elit. Etiam consectetur elementum eros, ac interdum ante molestie et.</p>
+
+	<p>Vestibulum aliquam imperdiet tellus. Aenean nec risus tincidunt, dictum risus ac, dignissim nibh. Nullam eget iaculis urna, ut tincidunt elit. Maecenas odio erat, venenatis at ante nec, luctus sagittis nisi. Pellentesque et est venenatis, tincidunt mauris mollis, iaculis enim. Praesent id volutpat augue. Morbi scelerisque tempus auctor. Praesent non egestas magna. Curabitur nec erat at velit hendrerit sagittis. Fusce iaculis sagittis nunc, et semper augue consectetur at. Etiam vitae arcu sit amet dui lacinia condimentum.</p>
+</div>
+
+</body>
+</html>
