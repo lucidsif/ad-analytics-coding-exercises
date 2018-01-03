@@ -2,6 +2,10 @@ window.getInviewPercent = function() {
 
     // Get the target ad node
     let target = document.querySelector('#sidebar img');
+    let container = document.getElementById('sidebar');
+    var contHeight = container.clientHeight;
+    var contTop = container.scrollTop;
+
     // Get the node's bounding client rect and extract the needed properties
     let boundingRect = target.getBoundingClientRect();
     let { x, y, width, height } = boundingRect;
@@ -29,6 +33,13 @@ window.getInviewPercent = function() {
     // Calculate the percentage of the visible area
     let percent =  (currentArea / totalArea) * 100;
 
+    console.log('TARGET:', y, currentHeight, percent, height);
+    console.log('PARENT', contHeight, contTop);
+
     return percent;
 
 };
+
+
+// get percent visible in scrollable div
+//
